@@ -72,7 +72,7 @@ The following illustrates this scenario:
 
 In this simple test script, a list object is being shared between all the tests in the ``Test_list`` test suite.
 In the second test, ``test_2``, it is assumed that this list object was correctly set up by the first test.
-If ``test_1`` were to fail for whatever reason, `test_2` cannot possibly pass anymore, as the list object was never set up properly.
+If ``test_1`` were to fail for whatever reason, ``test_2`` cannot possibly pass anymore, as the list object was never set up properly.
 However, ``test_2`` (and any further tests after it) will still be ran, wasting time and cluttering the final pytest summary overview with unhelpful errors.
 
 In order to solve this, we can apply the ``run_on_pass`` marker:
